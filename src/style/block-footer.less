@@ -1,0 +1,126 @@
+.page-footer {
+    padding: 5.7rem 0 5.9rem;
+    background-color: #fff;
+}
+
+.footer-social {
+    &__icon {
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin-left: 2rem;
+        &:first-child {
+            margin-left: 0;
+        }
+        &.icon-youtube {
+            &:hover {
+                svg {
+                    path {
+                        fill: #CD201F;
+                    }
+                }
+            }
+        }
+        &.icon-inst {
+            &:hover {
+                svg {
+                    path {
+                        fill: #517fa4;
+                    }
+                }
+            }
+        }
+        &.icon-vk {
+            &:hover {
+                svg {
+                    path {
+                        fill: #507299;
+                    }
+                }
+            }
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+            path {
+                transition: fill 0.25s ease;
+            }
+        }
+
+    }
+}
+.footer-text {
+    margin: 0.7rem 0 0;
+    font-size: 1.1rem;
+    color: #bdbdbd;
+}
+.footer-links {
+    margin: 0.5rem 0 0;
+    color: #757575;
+    font-size: 1.2rem;
+    a {
+        color: #757575;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.footer-copyright {
+    margin: 2.5rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    p {
+        color: #bdbdbd;
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+}
+.made-by {
+    display: flex;
+    align-items: center;
+    margin-top: -1.4rem;
+    a {
+        display: inline-block;
+        text-decoration: none;
+        &:hover {
+            svg .st20 {
+                fill: #cfe09a;
+                transition: ease .3s
+            }
+            svg .st21 {
+                fill: #c5d984;
+                transition: ease .3s
+            }
+            svg .st22 {
+                fill: #bad36c;
+                transition: ease .3s
+            }
+            svg .st23 {
+                fill: #aecc53;
+                transition: ease .3s
+            }
+            svg .st24 {
+                fill: #a2c73b;
+                transition: ease .3s
+            }
+            svg .st25 {
+                fill: #95c11e;
+                transition: ease .3s
+            }
+            svg .st26 {
+                fill: #e3ecc5;
+                transition: ease .3s
+            }
+        }
+    }
+    svg {
+        display: inline-block;
+        margin-left: 0.7rem;
+        margin-bottom: -0.2rem;
+        width: 6.7rem;
+        height: 4.2rem;
+    }
+}
