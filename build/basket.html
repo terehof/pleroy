@@ -167,6 +167,52 @@
                     </tr>
                 </table>
             </div>
+            <form action="/" name="order-sum">
+                <div class="basket__order-sum-title">
+                    <h2>Сумма заказов</h2>
+                </div>
+                <div class="basket__order-sum">
+                    <p>Подитог</p>
+                    <p>831 675 <span class="rub">q</span></p>
+                </div>
+                <div class="basket__radio">
+                    <div class="basket__labels">
+                        <input type="radio" id="free" name="delivery" value="free" checked>
+                        <label for="free">Бесплатная доставка</label>
+                    </div>
+                    <div class="basket__labels">
+                        <input type="radio" id="pickup" name="delivery" value="pickup">
+                        <label for="pickup">Самовывоз</label>
+                    </div>
+                    <div class="basket__labels">
+                        <input type="radio" id="flat-rate" name="delivery" value="flat-rate">
+                        <label for="flat-rate">Единая ставка</label>
+                    </div>
+                </div>
+                <a class="basket__calculate-price" href="#">Рассчитать стоимость доставки</a>
+                <div class="basket__input  basket__input--small">
+                    <input type="text" name="country" placeholder="Страна">
+                </div>
+                <div class="basket__input">
+                    <input type="text" name="region" placeholder="Область/регион">
+                </div>
+                <div class="basket__input">
+                    <input type="text" name="region" placeholder="Область/регион">
+                </div>
+                <button class="basket__btn">Обновить итог</button>
+            </form>
+            <div class="basket__sum-main">
+                <p>Итого</p>
+                <p>831 675 <span class="rub">q</span></p>
+            </div>
+            <div class="basket__control">
+                <div class="basket__link">
+                    <a href="#">Продолжить покупки</a>
+                </div>
+                <div class="basket__btn-accept">
+                    <button>Оформить заказ</button>
+                </div>
+            </div>
         </div>
     </section>
 </div>
