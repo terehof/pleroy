@@ -2067,6 +2067,7 @@ input[type="radio"] {
   color: #444444;
   margin-top: 35px;
   margin-bottom: 30px;
+  margin-left: -2px;
 }
 .basket__col-img {
   display: block;
@@ -2330,5 +2331,36 @@ input[type="radio"] {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+}
+.basket__empty {
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding-top: 32px;
+  padding-bottom: 30px;
+}
+.basket__empty p {
+  font-size: 34px;
+  font-weight: 400;
+  color: #444444;
+  line-height: 42px;
+}
+.basket__empty-link {
+  display: block;
+  width: 235px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #434c56;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 14px 0;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.02em;
+  margin-top: 39px;
+}
+.basket__empty-content {
+  min-height: 590px;
 }
 /*# sourceMappingURL=style.css.map */
