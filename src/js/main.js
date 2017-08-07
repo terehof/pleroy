@@ -31,12 +31,39 @@ app.main = {
                 autoplaySpeed: 3900
             })
         }
+    },
+    catalogSlider: function () {
+        var $catalogGallery = $('.catalog-product__gallery');
+        if ($catalogGallery.length && jQuery().slick) {
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: false,
+                dots: false,
+                infinite: false,
+                asNavFor: '.slider-nav',
+                speed: 750
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: false,
+                infinite: false,
+                arrows: false,
+                centerMode: false,
+                focusOnSelect: true,
+                speed: 600
+            });
+        }
     }
 };
 app.init = function () {
     app.main.menu();
     app.main.headerPhone();
     app.main.mainSlider();
+    app.main.catalogSlider();
 };
 
 
@@ -58,29 +85,10 @@ $(document).ready(function () {
         ['index', 'Главная'],
         ['catalog', 'Каталог'],
         ['catalog-sensors', 'Каталог - датчики'],
-        ['delivery', 'Доставка']
+        ['catalog-product', 'Каталог - карточка товара'],
+        ['delivery', 'Доставка'],
+        ['ordering', 'Оформление заказа'],
+        ['basket', 'Корзина'],
+        ['basket-empty', 'Корзина пустая']
     ]);
-
-
-    /*Catalog-slider
-    ===========================*/
-
-
-    $('.slider-for').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: false,
-      dots: false,
-      asNavFor: '.slider-nav'
-    });
-    $('.slider-nav').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      asNavFor: '.slider-for',
-      dots: false,
-      arrows: false,
-      centerMode: false,
-      focusOnSelect: true,
-    }); 
 });
