@@ -109,7 +109,7 @@
                         <a href="tel:+78612327214">+7(861) 232-72-14</a>
                     </div>
                     <div class="catalog-product__sidebar-link">
-                        <a href="#">Перезвоните мне</a>
+                        <a href="javascript:;" data-fancybox data-src="#modal-callback">Перезвоните мне</a>
                         <p>Хочу купить оборудование и заказать проект.</p>
                     </div>
                     <div class="catalog-product__sidebar-link">
@@ -172,9 +172,7 @@
 </div>
 @@include('footer.html')
 
-
-<script src="js/lib/jquery.min.js"></script>
-<script src="js/lib/slick.min.js"></script>
-<script src="js/main.js"></script>
+@@include('popups.html')
+@@include('scripts.html')
 </body>
 </html>

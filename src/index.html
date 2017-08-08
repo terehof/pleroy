@@ -25,7 +25,7 @@
                     проектирование, инсталляция и обслуживание систем
                     автоматизации домов, квартир и офисов.
                 </p>
-                <div class="button-primary main-slider-text__btn">Смотреть видеоролик</div>
+                <a data-fancybox href="https://www.youtube.com/watch?v=br8x18Cb7fg&autoplay=1&rel=0&controls=0&showinfo=0" class="button-primary main-slider-text__btn">Смотреть видеоролик</a>
             </div>
         </div>
         <div class="main-slider">
@@ -46,7 +46,7 @@
                 <div class="benefit">
                     <div class="benefit__title">Выезжаем</div>
                     <div class="benefit__subtitle">по краю</div>
-                    <a href="#" class="benefit__link">Заказать выезд</a>
+                    <a href="javascript:;" data-fancybox data-src="#modal-callback" class="benefit__link">Заказать выезд</a>
                 </div>
                 <div class="benefit">
                     <div class="benefit__title">Доставляем</div>
@@ -401,8 +401,8 @@
 @@include('footer.html')
 
 
-<script src="js/lib/jquery.min.js"></script>
-<script src="js/lib/slick.min.js"></script>
-<script src="js/main.js"></script>
+
+@@include('popups.html')
+@@include('scripts.html')
 </body>
 </html>

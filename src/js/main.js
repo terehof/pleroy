@@ -57,6 +57,13 @@ app.main = {
                 speed: 600
             });
         }
+    },
+    fancybox: function () {
+        $('[data-fancybox]').fancybox({
+            buttons : [
+                'close'
+            ]
+        });
     }
 };
 app.init = function () {
@@ -64,6 +71,7 @@ app.init = function () {
     app.main.headerPhone();
     app.main.mainSlider();
     app.main.catalogSlider();
+    app.main.fancybox();
 };
 
 

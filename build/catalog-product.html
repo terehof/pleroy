@@ -170,7 +170,7 @@
                         <a href="tel:+78612327214">+7(861) 232-72-14</a>
                     </div>
                     <div class="catalog-product__sidebar-link">
-                        <a href="#">Перезвоните мне</a>
+                        <a href="javascript:;" data-fancybox data-src="#modal-callback">Перезвоните мне</a>
                         <p>Хочу купить оборудование и заказать проект.</p>
                     </div>
                     <div class="catalog-product__sidebar-link">
@@ -346,9 +346,28 @@
     </div>
 </footer>
 
+<div class="modal modal-callback" id="modal-callback">
+    <div class="modal__title">Перезвоните мне</div>
+    <div class="modal__form">
+        <form action="#">
+            <div class="input-wrap">
+                <input type="tel" class="input" placeholder="Номер телефона">
+            </div>
+            <div class="input-wrap">
+                <textarea name="message" id="message" cols="30" rows="7" class="textarea" placeholder="Ваш комментарий"></textarea>
+            </div>
+            <p class="form-comment">
+                Нажимая на кнопку «Жду звонка!», я даю <br>
+                <a href="#">согласие на обработку персональных данных</a>
+            </p>
+            <button type="submit" class="form-submit-btn">Жду звонка!</button>
 
+        </form>
+    </div>
+</div>
 <script src="js/lib/jquery.min.js"></script>
 <script src="js/lib/slick.min.js"></script>
+<script src="js/lib/jquery.fancybox.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

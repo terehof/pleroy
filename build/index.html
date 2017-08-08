@@ -86,7 +86,7 @@
                     проектирование, инсталляция и обслуживание систем
                     автоматизации домов, квартир и офисов.
                 </p>
-                <div class="button-primary main-slider-text__btn">Смотреть видеоролик</div>
+                <a data-fancybox href="https://www.youtube.com/watch?v=br8x18Cb7fg&autoplay=1&rel=0&controls=0&showinfo=0" class="button-primary main-slider-text__btn">Смотреть видеоролик</a>
             </div>
         </div>
         <div class="main-slider">
@@ -107,7 +107,7 @@
                 <div class="benefit">
                     <div class="benefit__title">Выезжаем</div>
                     <div class="benefit__subtitle">по краю</div>
-                    <a href="#" class="benefit__link">Заказать выезд</a>
+                    <a href="javascript:;" data-fancybox data-src="#modal-callback" class="benefit__link">Заказать выезд</a>
                 </div>
                 <div class="benefit">
                     <div class="benefit__title">Доставляем</div>
@@ -575,8 +575,29 @@
 </footer>
 
 
+
+<div class="modal modal-callback" id="modal-callback">
+    <div class="modal__title">Перезвоните мне</div>
+    <div class="modal__form">
+        <form action="#">
+            <div class="input-wrap">
+                <input type="tel" class="input" placeholder="Номер телефона">
+            </div>
+            <div class="input-wrap">
+                <textarea name="message" id="message" cols="30" rows="7" class="textarea" placeholder="Ваш комментарий"></textarea>
+            </div>
+            <p class="form-comment">
+                Нажимая на кнопку «Жду звонка!», я даю <br>
+                <a href="#">согласие на обработку персональных данных</a>
+            </p>
+            <button type="submit" class="form-submit-btn">Жду звонка!</button>
+
+        </form>
+    </div>
+</div>
 <script src="js/lib/jquery.min.js"></script>
 <script src="js/lib/slick.min.js"></script>
+<script src="js/lib/jquery.fancybox.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

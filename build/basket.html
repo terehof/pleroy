@@ -85,13 +85,13 @@
                                 <span>Доступно для предзаказа</span>
                             </div>
                         </td>
-                        <td class="basket__col-2">5000 <span class="rub">q</span></td>
+                        <td class="basket__col-2">5000 <span class="rub">i</span></td>
                         <td class="basket__col-3">
                             <span class="minus">-</span>
                             <input type="number" id="input" value="1">
                             <span class="plus">+</span>
                         </td>
-                        <td class="basket__col-4">5000 <span class="rub">q</span></td>
+                        <td class="basket__col-4">5000 <span class="rub">i</span></td>
                         <td class="basket__col-5">
                             <a href="#">
                                 <svg width="24" x="0px" y="0px"
@@ -115,13 +115,13 @@
                                 <span>Доступно для предзаказа</span>
                             </div>
                         </td>
-                        <td class="basket__col-2">34 990 <span class="rub">q</span></td>
+                        <td class="basket__col-2">34 990 <span class="rub">i</span></td>
                         <td class="basket__col-3">
                             <span class="minus">-</span>
                             <input type="number" id="input" value="1">
                             <span class="plus">+</span>
                         </td>
-                        <td class="basket__col-4">68 155 <span class="rub">q</span></td>
+                        <td class="basket__col-4">68 155 <span class="rub">i</span></td>
                         <td class="basket__col-5">
                             <a href="#">
                                 <svg width="24" x="0px" y="0px"
@@ -145,13 +145,13 @@
                                 <span>Доступно для предзаказа</span>
                             </div>
                         </td>
-                        <td class="basket__col-2">75 852 <span class="rub">q</span></td>
+                        <td class="basket__col-2">75 852 <span class="rub">i</span></td>
                         <td class="basket__col-3">
                             <span class="minus">-</span>
                             <input type="number" id="input" value="1">
                             <span class="plus">+</span>
                         </td>
-                        <td class="basket__col-4">758 520 <span class="rub">q</span></td>
+                        <td class="basket__col-4">758 520 <span class="rub">i</span></td>
                         <td class="basket__col-5">
                             <a href="#">
                                 <svg width="24" x="0px" y="0px"
@@ -173,7 +173,7 @@
                 </div>
                 <div class="basket__order-sum">
                     <p>Подитог</p>
-                    <p>831 675 <span class="rub">q</span></p>
+                    <p>831 675 <span class="rub">i</span></p>
                 </div>
                 <div class="basket__radio">
                     <div class="basket__labels">
@@ -203,7 +203,7 @@
             </form>
             <div class="basket__sum-main">
                 <p>Итого</p>
-                <p>831 675 <span class="rub">q</span></p>
+                <p>831 675 <span class="rub">i</span></p>
             </div>
             <div class="basket__control">
                 <div class="basket__link">
@@ -331,9 +331,28 @@
     </div>
 </footer>
 
+<div class="modal modal-callback" id="modal-callback">
+    <div class="modal__title">Перезвоните мне</div>
+    <div class="modal__form">
+        <form action="#">
+            <div class="input-wrap">
+                <input type="tel" class="input" placeholder="Номер телефона">
+            </div>
+            <div class="input-wrap">
+                <textarea name="message" id="message" cols="30" rows="7" class="textarea" placeholder="Ваш комментарий"></textarea>
+            </div>
+            <p class="form-comment">
+                Нажимая на кнопку «Жду звонка!», я даю <br>
+                <a href="#">согласие на обработку персональных данных</a>
+            </p>
+            <button type="submit" class="form-submit-btn">Жду звонка!</button>
 
+        </form>
+    </div>
+</div>
 <script src="js/lib/jquery.min.js"></script>
 <script src="js/lib/slick.min.js"></script>
+<script src="js/lib/jquery.fancybox.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
