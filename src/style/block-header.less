@@ -1,7 +1,23 @@
+@keyframes checked-anim {
+    100% {
+        width: 100%;
+        height: 100%;
+        transform: translate3d(0px, 0px, 0px);
+        border-radius: 0;
+    }
+}
+@keyframes close-anim {
+    100% {
+        width: 100%;
+        height: 100%;
+        transform: translate3d(2000px, 0px, 0px);
+    }
+}
+
 .page-header {
     position: relative;
     z-index: 7;
-    padding: 1.7rem 0;
+    padding: 1.8rem 0 1.9rem;
     background-color: #434c56;
     &__logo {
         display: inline-block;
@@ -15,11 +31,20 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 480px) {
+            justify-content: flex-end;
+        }
     }
 
     &__menu {
         margin-right: auto;
         margin-left: 5rem;
+        @media (max-width: 768px) {
+            margin-left: 3rem;
+        }
+        @media (max-width: 480px) {
+            display: none;
+        }
         a {
             display: inline-block;
             margin-left: 2.5rem;
@@ -42,6 +67,27 @@
         text-decoration: none;
         font-size: 2.2rem;
         color: #ffffff;
+        @media (max-width: 768px) {
+            margin-right: 2.5rem;
+        }
+        @media (max-width: 640px) {
+            display: none;
+        }
+    }
+    &__phone-mobile {
+        display: inline-block;
+        margin-right: 2rem;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        svg {
+            .centered();
+            max-width: 100%;
+            max-height: 100%;
+        }
+        @media (max-width: 480px) {
+            margin-left: auto;
+        }
     }
     &__cart-btn {
         position: relative;
@@ -50,7 +96,16 @@
         text-decoration: none;
         width: 3.3rem;
         height: 3.3rem;
-        background: url(../img/cart-empty.svg) center/cover no-repeat;
+        svg {
+            width: 100%;
+            height: 100%;
+            .st0 {
+                fill: none;
+            }
+            polyline, circle {
+                transition: stroke 0.25s ease
+            }
+        }
         .count {
             position: absolute;
             top: -3px;
@@ -65,63 +120,84 @@
             line-height: 1.8rem;
             background-color: #43a047;
         }
+        &:hover {
+            polyline, circle {
+                stroke: #fff;
+            }
+        }
     }
     &__menu-btn {
-        position: relative;
         display: inline-block;
-        text-decoration: none;
-        width: 4rem;
-        height: 4rem;
-        margin: -0.7rem -0.7rem -0.7rem 2.5rem;
+        margin: 0 0 0 2.5rem;
+        width: 30px;
+        height: 23px;
+        position: relative;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        z-index: 1000;
         cursor: pointer;
-        &:before,
-        &:after {
-            content: '';
+        span {
+            display: block;
             position: absolute;
-            width: 3rem;
-            height: 2rem;
-            .centered;
-            background-size: 100% 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            transition: opacity 0.25s ease;
-            will-change: opacity;
-        }
-        &:before {
-            background-image: url(../img/sandwich.svg);
+            height: 3px;
+            width: 100%;
+            background: #90a4ae;
             opacity: 1;
-        }
-        &:after {
-            background-image: url(../img/sandwich-hover.svg);
-            opacity: 0;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+            pointer-events: none;
+            &:nth-child(2),
+            &:nth-child(3) {
+                top: 10px;
+            }
+            &:nth-child(4) {
+                top: 20px;
+            }
         }
         &:hover {
-            &:before {
-                opacity: 0;
+            span {
+                background: #fff;
+                transition: ease 0.3s;
             }
-            &:after {
-                opacity: 1;
-            }
-        }
-        .cross {
-            position: absolute;
-            opacity: 0;
-            width: 2rem;
-            height: 2rem;
-            .centered;
-            display: inline-block;
-            background: url(../img/close-icon-base.svg) no-repeat;
-            background-size: 100% 100%;
-            transition: opacity 0.25s ease;
-            will-change: opacity;
         }
         &.active {
-            .cross {
-                opacity: 1;
-            }
-            &:before,
-            &:after {
-                opacity: 0;
+            span {
+                background: #fff;
+                &:nth-child(1) {
+                    top: 18px;
+                    width: 0%;
+                    left: 50%;
+                }
+                &:nth-child(2) {
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+                &:nth-child(3) {
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(4) {
+                    top: 18px;
+                    width: 0%;
+                    left: 50%;
+                }
             }
         }
     }
@@ -155,6 +231,7 @@
     left: 0;
     top: 6rem;
     height: calc(~'100vh - 6rem');
+    min-height: 41rem;
     width: 100vw;
     background-color: #212121;
     transform: translate(100%, 0);
@@ -166,6 +243,9 @@
     .container {
         width: 860px;
         display: block;
+        @media (max-width: 880px) {
+            width: 100%;
+        }
     }
 
 
