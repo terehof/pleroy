@@ -238,6 +238,11 @@
     transform: translate(0, -130%);
     transition: transform 0.5s ease-in-out;
     will-change: transform;
+    @media (max-width: 640px) {
+        top: 7.7rem;
+        height: auto;
+        padding-bottom: 1.5rem;
+    }
     &.active {
         transform: translate(0, 0);
     }
@@ -278,6 +283,20 @@
             font-size: 1.8rem;
             color: #757575;
         }
+        @media (max-width: 640px) {
+            ul {
+                max-height: none;
+                li {
+                    width: 100%;
+                    &:nth-last-child(1),
+                    &:nth-last-child(2),
+                    &:nth-last-child(3),
+                    &:nth-last-child(4) {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
     &__secondary {
         margin-top: 12vh;
@@ -303,6 +322,16 @@
             display: inline-block;
             width: 100%;
             margin: 1.5vh 0 1.5vh;
+        }
+        @media (max-width: 640px) {
+            margin-top: 4rem;
+            ul {
+                column-count: 1;
+                li {
+                    width: 100%;
+                    margin: 0.5rem 0;
+                }
+            }
         }
     }
 }

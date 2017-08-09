@@ -20,7 +20,7 @@ app.main = {
             $this.toggleClass('active');
 
             $('.fullscreen-menu').toggleClass('active');
-            $('body').toggleClass('overflowHidden');
+            // $('body').toggleClass('overflowHidden');
         });
     },
     mainSlider: function () {
@@ -68,6 +68,13 @@ app.main = {
                 'close'
             ]
         });
+    },
+    select: function () {
+        if (jQuery().chosen) {
+            $('select').chosen({
+                disable_search_threshold: 10
+            });
+        }
     }
 };
 app.init = function () {
@@ -76,6 +83,7 @@ app.init = function () {
     app.main.mainSlider();
     app.main.catalogSlider();
     app.main.fancybox();
+    app.main.select();
 };
 
 
