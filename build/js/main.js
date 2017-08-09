@@ -5,9 +5,11 @@ app.main = {
         if ($phone.length) {
             $('.jsHeaderPhone').hover(
                 function () {
+                    $phone.fadeIn(300);
                     $phone.addClass('active');
                 },
                 function () {
+                    $phone.fadeOut(300);
                     $phone.removeClass('active');
                 });
         }
@@ -17,6 +19,7 @@ app.main = {
             var $this = $(this);
             $this.toggleClass('active');
             $('.fullscreen-menu').toggleClass('active');
+            $('body').toggleClass('overflowHidden');
         });
     },
     mainSlider: function () {

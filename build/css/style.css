@@ -499,31 +499,34 @@ table {
   left: 50%;
 }
 .fullscreen-phone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
-  z-index: 6;
+  display: none;
+  z-index: 101;
   left: 0;
   top: 6rem;
   height: calc(100vh - 6rem);
   width: 100vw;
   background-color: #434c56;
-  transform: translate(0, -120%);
-  transition: transform 0.4s ease-in-out;
-  will-change: transform;
-  font-size: 6.8rem;
+  transition: font-size 0.3s ease-in-out;
+  will-change: font-size;
+  font-size: 1rem;
   color: #ffffff;
 }
+.fullscreen-phone > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .fullscreen-phone.active {
-  transform: translate(0, 0);
+  font-size: 6.8rem;
 }
 .fullscreen-menu {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  z-index: 5;
+  z-index: 102;
   left: 0;
   top: 6rem;
   height: calc(100vh - 6rem);
@@ -1620,6 +1623,14 @@ html {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   color: #444444;
+}
+body.overflowHidden {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
 }
 img {
   max-width: 100%;

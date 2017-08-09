@@ -203,31 +203,32 @@
     }
 }
 .fullscreen-phone {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
-    z-index: 6;
+    display: none;
+    z-index: 101;
     left: 0;
     top: 6rem;
     height: calc(~'100vh - 6rem');
     width: 100vw;
     background-color: #434c56;
-    transform: translate(0, -120%);
-    transition: transform 0.4s ease-in-out;
-    will-change: transform;
-    &.active {
-        transform: translate(0, 0);
-    }
-    font-size: 6.8rem;
+    transition: font-size 0.3s ease-in-out;
+    will-change: font-size;
+    font-size: 1rem;
     color: #ffffff;
+    > div {
+        position: absolute;
+        .centered();
+    }
+    &.active {
+        font-size: 6.8rem;
+    }
 }
 .fullscreen-menu {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    z-index: 5;
+    z-index: 102;
     left: 0;
     top: 6rem;
     height: calc(~'100vh - 6rem');
