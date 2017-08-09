@@ -302,7 +302,7 @@ table {
 }
 .page-header {
   position: relative;
-  z-index: 7;
+  z-index: 103;
   padding: 1.8rem 0 1.9rem;
   background-color: #434c56;
 }
@@ -533,7 +533,7 @@ table {
   min-height: 41rem;
   width: 100vw;
   background-color: #212121;
-  transform: translate(100%, 0);
+  transform: translate(0, -130%);
   transition: transform 0.5s ease-in-out;
   will-change: transform;
 }
@@ -561,13 +561,18 @@ table {
   width: 100%;
 }
 .fullscreen-menu__primary ul {
-  width: 33%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 36vh;
+  max-height: calc(7.2rem + 18.4vh);
 }
 .fullscreen-menu__primary li {
-  margin-top: 4.6vh;
-}
-.fullscreen-menu__primary li:first-child {
-  margin-top: 0;
+  flex-grow: 1;
+  display: inline-block;
+  width: 33.3%;
+  margin: 2.3vh 0 2.3vh;
 }
 .fullscreen-menu__primary a {
   font-size: 1.8rem;
@@ -591,13 +596,13 @@ table {
   color: #424242;
 }
 .fullscreen-menu__secondary ul {
-  width: 33%;
+  width: 100%;
+  column-count: 3;
 }
 .fullscreen-menu__secondary li {
-  margin-top: 3vh;
-}
-.fullscreen-menu__secondary li :first-child {
-  margin-top: 0;
+  display: inline-block;
+  width: 100%;
+  margin: 1.5vh 0 1.5vh;
 }
 .page-footer {
   padding: 5.7rem 0 5.9rem;
@@ -2927,14 +2932,14 @@ a[data-fancybox] {
   padding: 2.3rem 0 3.5rem;
 }
 .catalog-nav__primary ul {
+  width: 100%;
   box-sizing: border-box;
-  padding-right: 1.5rem;
+  column-count: 3;
 }
 .catalog-nav__primary ul li {
-  margin: 2.3rem 0 0;
-}
-.catalog-nav__primary ul li:first-child {
-  margin-top: 0;
+  display: inline-block;
+  width: 100%;
+  margin: 1.2rem 0 1.2rem;
 }
 .catalog-nav__primary ul li a {
   font-size: 1.8rem;
@@ -2961,13 +2966,12 @@ a[data-fancybox] {
 }
 .catalog-nav__secondary ul {
   box-sizing: border-box;
-  padding-right: 1.5rem;
+  width: 100%;
+  column-count: 4;
 }
 .catalog-nav__secondary ul li {
-  margin: 0.8rem 0 0;
-}
-.catalog-nav__secondary ul li:first-child {
-  margin-top: 0;
+  width: 100%;
+  margin: 0.4rem 0 0.4rem;
 }
 .catalog-nav__secondary ul li a {
   font-size: 1.8rem;

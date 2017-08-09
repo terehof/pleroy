@@ -18,6 +18,7 @@ app.main = {
         $('.jsToggleMenu').on('click', function () {
             var $this = $(this);
             $this.toggleClass('active');
+
             $('.fullscreen-menu').toggleClass('active');
             $('body').toggleClass('overflowHidden');
         });

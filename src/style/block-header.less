@@ -16,7 +16,7 @@
 
 .page-header {
     position: relative;
-    z-index: 7;
+    z-index: 103;
     padding: 1.8rem 0 1.9rem;
     background-color: #434c56;
     &__logo {
@@ -235,7 +235,7 @@
     min-height: 41rem;
     width: 100vw;
     background-color: #212121;
-    transform: translate(100%, 0);
+    transform: translate(0, -130%);
     transition: transform 0.5s ease-in-out;
     will-change: transform;
     &.active {
@@ -261,14 +261,18 @@
         display: flex;
         width: 100%;
         ul {
-            width: 33%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-height: 36vh;
+            max-height: calc(~'7.2rem + 18.4vh');
         }
         li {
-            //margin-top: 3.3rem;
-            margin-top: 4.6vh;
-            &:first-child {
-                margin-top: 0;
-            }
+            flex-grow: 1;
+            display: inline-block;
+            width: 33.3%;
+            margin: 2.3vh 0 2.3vh;
         }
         a {
             font-size: 1.8rem;
@@ -292,14 +296,13 @@
             color: #424242;
         }
         ul {
-            width: 33%;
+            width: 100%;
+            column-count: 3;
         }
         li {
-            //margin-top: 2rem;
-            margin-top: 3vh;
-            :first-child {
-                margin-top: 0;
-            }
+            display: inline-block;
+            width: 100%;
+            margin: 1.5vh 0 1.5vh;
         }
     }
 }
