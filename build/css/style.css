@@ -2089,9 +2089,6 @@ body.overflowHidden {
 img {
   max-width: 100%;
 }
-a:visited {
-  color: #444;
-}
 ::selection {
   background: #434c56;
   color: #cfd8dc;
@@ -3796,6 +3793,10 @@ a[data-fancybox] {
 }
 .text-page-content ul {
   list-style: disc;
+  padding-left: 1.9rem;
+}
+.text-page-content a:visited {
+  color: #444;
 }
 .catalog-categories {
   margin: 0.8rem 0 0;
